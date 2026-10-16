@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Valter Murilo Belluzzo. Desenvolvedor em início de carreira, com foco em JavaScript, aplicações web e integração com APIs.">
+  <meta name="theme-color" content="#101312">
+  <title>Valter Murilo Belluzzo | Desenvolvedor JavaScript</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('vmb-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="projetos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header wrap">
+    <a class="brand" href="#inicio" aria-label="Valter Murilo Belluzzo, início">vmb<span>.</span><span class="brand-caption">DESENVOLVIMENTO<br>DE SOFTWARE</span></a>
+    <nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <button class="theme-button" id="theme-toggle" type="button" aria-label="Mudar tema"><span id="theme-icon" aria-hidden="true">☀</span><span id="theme-label">Tema claro</span></button>
+  </header>
+  <main id="conteudo">
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> EM BUSCA DA PRIMEIRA VAGA EM DESENVOLVIMENTO</p>
+        <p class="intro">Olá, sou Valter Murilo Belluzzo.</p>
+        <h1>Problemas reais.<br>Soluções em <span>JavaScript.</span></h1>
+        <p class="hero-description">Desenvolvedor em início de carreira. Transformo curiosidade e experiência com pessoas e tecnologia em aplicações web úteis.</p>
+        <div class="actions"><a class="button primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a><a class="button secondary" href="assets/Curriculo_Valter_Murilo_Belluzzo.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-meta"><span>JavaScript como foco</span><span>ADS · conclusão prevista em 2026</span></div>
+      </div>
+      <div class="hero-art" aria-label="Representação visual de código JavaScript e de uma interface de cálculo de troco" role="img">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-coordinate">01 / IDEIA → INTERFACE</div>
+        <div class="code-window"><div class="window-bar"><span class="window-dots">● ● ●</span><span>resolver.js</span><span>JS</span></div><pre><span class="code-muted">// Começa com um problema real.</span>
+<span class="code-purple">const</span> desenvolver = (ideia) <span class="code-purple">=&gt;</span> {
+  <span class="code-purple">return</span> {
+    linguagem: <span class="code-green">'JavaScript'</span>,
+    propósito: <span class="code-green">'simplificar'</span>,
+    próximoPasso: <span class="code-green">'construir'</span>
+  };
+};</pre><div class="code-bottom"><span class="status-dot"></span> Curiosidade em construção</div></div>
+        <div class="floating-result"><span class="mini-icon">↗</span><div><small>DA EXPERIÊNCIA AO CÓDIGO</small><strong>PDV Otimizado</strong><span>Uma solução para facilitar o troco.</span></div></div>
+        <span class="art-plus" aria-hidden="true">+</span>
+      </div>
+    </section>
+    <div class="stack-strip"><div class="wrap"><span class="eyebrow">MINHA CAIXA DE FERRAMENTAS</span><div><strong>JavaScript</strong><span>HTML & CSS</span><span>Python</span><span>C#</span><span>SQL</span><span>Git & GitHub</span></div></div></div>
+    <section class="projects-section wrap" id="projetos">
+      <div class="section-heading"><div><p class="eyebrow">01 / PROJETOS SELECIONADOS</p><h2>Código com contexto.</h2></div><p>O problema, a solução e o que<br>aprendi ao construir.</p></div>
+      <div class="filters" role="group" aria-label="Filtrar projetos"><button type="button" data-filter="todos" aria-pressed="true">Todos</button><button type="button" data-filter="autoral" aria-pressed="false">Autorais</button><button type="button" data-filter="estudo" aria-pressed="false">Estudos</button></div>
+      <p id="project-count" class="sr-only" role="status" aria-live="polite"></p>
+      <div id="projects-grid" class="projects-grid"></div>
+      <noscript><p>Ative o JavaScript para explorar os cards. Consulte também os projetos no <a href="https://github.com/mubelesa">GitHub</a>.</p></noscript>
+      <a class="text-link github-all" href="https://github.com/mubelesa?tab=repositories" target="_blank" rel="noopener noreferrer">Mais estudos e código no GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="case-section" aria-labelledby="case-title"><div class="wrap case-grid"><div><p class="eyebrow">POR TRÁS DO PROJETO / PDV OTIMIZADO</p><h2 id="case-title">Antes do código,<br>veio o balcão.</h2><p>Quando trabalhei no caixa de uma farmácia, moedas e notas pequenas nem sempre estavam disponíveis. Negociar um valor adicional com o cliente ajudava a facilitar o troco.</p><p>Essa experiência inspirou meu projeto autoral: uma interface que calcula o troco e sugere ajustes no valor pago. Uma situação cotidiana virou uma oportunidade de aplicar lógica de programação.</p><a class="text-link" href="https://github.com/mubelesa/pdvotimizado" target="_blank" rel="noopener noreferrer">Conhecer o código do PDV <span aria-hidden="true">↗</span></a></div>
+      <div class="demo-panel"><div class="demo-top"><span>EXPERIMENTE A IDEIA</span><span class="pill">Demo interativa</span></div><h3>Um troco mais simples.</h3><p class="demo-caption">Simulação do conceito do PDV, sem registrar vendas.</p><div class="demo-inputs"><label>Total da compra (R$)<input id="demo-total" type="number" min="0" max="1000000" step="0.01" value="42.30" inputmode="decimal"></label><label>Valor recebido (R$)<input id="demo-paid" type="number" min="0" max="1000000" step="0.01" value="50.00" inputmode="decimal"></label></div><div class="change-row"><span>Troco calculado</span><output id="demo-change">R$ 7,70</output></div><div class="suggestion" role="status" aria-live="polite"><span aria-hidden="true">↳</span><p id="demo-suggestion"></p></div><small>Confira com o cliente qualquer ajuste no pagamento.</small></div>
+    </div></section>
+    <section class="about-section wrap" id="sobre"><div><p class="eyebrow">02 / SOBRE MIM</p><h2>Curiosidade que<br>virou direção.</h2><div class="about-label"><span class="status-dot"></span> Aprendizado contínuo</div></div><div class="about-copy"><p class="lead">Meu interesse por programação começou em 2022, ao ver um amigo da área programando. A curiosidade virou paixão e me levou a estudar desenvolvimento de software.</p><p>Hoje curso Análise e Desenvolvimento de Sistemas na UniCesumar, com conclusão prevista para dezembro de 2026. Meu foco é JavaScript, sem deixar de explorar Python, C# e integração com APIs.</p><p>Trago da minha trajetória em telecomunicações, atendimento e supervisão a prática de investigar problemas, comunicar soluções e prestar atenção aos detalhes. Busco minha primeira oportunidade profissional em desenvolvimento.</p><div class="about-facts"><div><small>FORMAÇÃO</small><strong>Análise e Desenvolvimento de Sistemas</strong><span>UniCesumar · 2024–2026 (previsão)</span></div><div><small>IDIOMAS</small><strong>Português nativo · Inglês avançado</strong><span>Leitura, escrita e conversação</span></div></div></div></section>
+    <section class="contact-section wrap" id="contato"><p class="eyebrow">03 / VAMOS CONVERSAR</p><div class="contact-grid"><div><h2>Um próximo desafio.<br>Uma nova oportunidade.</h2><p>Busco oportunidades de desenvolvimento de software,<br>com especial interesse em JavaScript.</p></div><div class="contact-links"><a href="mailto:murilobelluzzo1997@gmail.com">Enviar e-mail <span aria-hidden="true">↗</span><small>murilobelluzzo1997@gmail.com</small></a><a href="https://www.linkedin.com/in/murilo-belluzzo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/mubelesa" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> Valter Murilo Belluzzo</span><span>Feito com HTML, CSS e JavaScript.</span><a href="#inicio">Voltar ao início ↑</a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">DETALHES DO PROJETO</span><button id="dialog-close" type="button" aria-label="Fechar detalhes">✕</button></div><h2 id="dialog-title"></h2><p id="dialog-origin" class="muted"></p><div id="dialog-content"></div><a id="dialog-repo" class="button primary" target="_blank" rel="noopener noreferrer">Ver código no GitHub ↗</a></dialog>
+</body>
+</html>
