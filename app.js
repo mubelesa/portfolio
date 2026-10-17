@@ -41,7 +41,7 @@
     $('#dialog-origin').textContent = project.tipo;
     const content = $('#dialog-content');
     content.replaceChildren();
-    [['O problema', 'problema'], ['A solução', 'solucao'], ['Minha participação', 'contribuicao'], ['Aprendizados', 'aprendizado'], ['Escopo atual', 'escopo']].forEach(([title, key]) => {
+    [['O problema', 'problema'], ['A solução', 'solucao'], ['Minha participação', 'contribuicao'], ['Aprendizados', 'aprendizado'], ['Escopo atual', 'escopo'], ['Próximos passos', 'futuro']].forEach(([title, key]) => {
       if (!project[key]) return;
       content.append(element('h3', '', title), element('p', '', project[key]));
     });
@@ -61,15 +61,17 @@
       const card = element('article', 'project-card');
       const visual = element('div', `project-visual ${project.id === 'pdv' ? 'pdv-visual' : 'cep-visual'}`);
       visual.setAttribute('aria-hidden', 'true');
-      visual.append(element('span', 'visual-label', project.id === 'pdv' ? 'CAIXA / INTERFACE WEB' : project.id === 'cep' ? 'ENDEREÇO / INTEGRAÇÃO API' : 'PROJETO / DESENVOLVIMENTO'));
+      visual.append(element('span', 'visual-label', project.id === 'pdv' ? 'CAIXA / INTERFACE WEB' : project.id === 'cep' ? 'ENDEREÇO / INTEGRAÇÃO API' : project.id === 'inventario' ? 'INVENTÁRIO / PROTÓTIPO WEB' : 'PROJETO / DESENVOLVIMENTO'));
       const mini = element('div', 'mini-app');
-      mini.append(element('span', 'mini-app-title', project.id === 'pdv' ? 'PDV Otimizado' : project.id === 'cep' ? 'Preencha menos. Encontre mais.' : project.titulo));
+      mini.append(element('span', 'mini-app-title', project.id === 'pdv' ? 'PDV Otimizado' : project.id === 'cep' ? 'Preencha menos. Encontre mais.' : project.id === 'inventario' ? 'Casa em Ordem' : project.titulo));
       if (project.id === 'pdv') {
         mini.append(element('div', 'mini-line', 'Total da compra                 R$ 42,30'), element('div', 'mini-line', 'Valor recebido                  R$ 50,00'), element('div', 'mini-highlight', 'Troco  →  R$ 7,70'), element('div', 'mini-foot', '+ R$ 0,30 recebidos → R$ 8,00 de troco'));
       } else if (project.id === 'cep') {
         mini.append(element('div', 'mini-line', 'CEP                         80010-000'), element('div', 'mini-highlight', '✓ Endereço encontrado'), element('div', 'mini-line', 'Rua XV de Novembro'), element('div', 'mini-foot', 'Centro · Curitiba · PR'));
+      } else if (project.id === 'inventario') {
+        mini.append(element('div', 'mini-line', 'Cozinha · CX-01'), element('div', 'mini-line', 'Pratos de jantar · 6 de 8 conferidos'), element('div', 'mini-highlight', '2 unidades a conferir'), element('div', 'mini-foot', 'Exemplo de conferência · exportação em PDF'));
       } else {
-        mini.append(element('div', 'mini-highlight', '</> Código em construção'), element('div', 'mini-line', project.tecnologias.join(' · ')), element('div', 'mini-foot', project.tipo));
+        mini.append(element('div', 'mini-highlight', '</> Aplicação de software'), element('div', 'mini-line', project.tecnologias.join(' · ')), element('div', 'mini-foot', project.tipo));
       }
       visual.append(mini);
       const body = element('div', 'project-body');
